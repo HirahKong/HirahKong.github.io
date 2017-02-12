@@ -6,14 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Hirah&#39;s Blog</title>
+  <title>拿来即用：Android App签名校验和Dex文件校验 | Hirah&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hirah's Blog">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="应用签名校验">
+<meta property="og:type" content="article">
+<meta property="og:title" content="拿来即用：Android App签名校验和Dex文件校验">
+<meta property="og:url" content="http://yoursite.com/2017/02/12/拿来即用：Android-App签名校验和Dex文件校验/index.html">
 <meta property="og:site_name" content="Hirah's Blog">
+<meta property="og:description" content="应用签名校验">
+<meta property="og:updated_time" content="2017-02-12T01:09:13.934Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hirah's Blog">
+<meta name="twitter:title" content="拿来即用：Android App签名校验和Dex文件校验">
+<meta name="twitter:description" content="应用签名校验">
   
     <link rel="alternative" href="/atom.xml" title="Hirah&#39;s Blog" type="application/atom+xml">
   
@@ -149,36 +153,60 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-拿来即用：Android-App签名校验和Dex文件校验" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/02/12/拿来即用：Android-App签名校验和Dex文件校验/" class="archive-article-date">
-  	<time datetime="2017-02-12T00:24:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-12</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/02/12/拿来即用：Android-App签名校验和Dex文件校验/">拿来即用：Android App签名校验和Dex文件校验</a>
+    <h1 class="article-title" itemprop="name">
+      拿来即用：Android App签名校验和Dex文件校验
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2017/02/12/拿来即用：Android-App签名校验和Dex文件校验/" class="archive-article-date">
+  	<time datetime="2017-02-12T00:24:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="应用签名校验"><a href="#应用签名校验" class="headerlink" title="应用签名校验"></a>应用签名校验</h2><a id="more"></a>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"> * Create By HaoRui</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SignCheck</span> </span>&#123;</div><div class="line">    <span class="keyword">private</span> Context context;</div><div class="line">    <span class="keyword">private</span> String cer = <span class="keyword">null</span>;</div><div class="line">    <span class="keyword">private</span> String realCer = <span class="keyword">null</span>;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String TAG = <span class="string">"SignCheck"</span>;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">SignCheck</span><span class="params">(Context context)</span> </span>&#123;</div><div class="line">        <span class="keyword">this</span>.context = context;</div><div class="line">        <span class="keyword">this</span>.cer = getCertificateSHA1Fingerprint();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">SignCheck</span><span class="params">(Context context, String realCer)</span> </span>&#123;</div><div class="line">        <span class="keyword">this</span>.context = context;</div><div class="line">        <span class="keyword">this</span>.realCer = realCer;</div><div class="line">        <span class="keyword">this</span>.cer = getCertificateSHA1Fingerprint();</div><div class="line">    &#125;</div><div class="line">&lt;!-- more --&gt;</div><div class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getRealCer</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> realCer;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">/**</span></div><div class="line">     * 设置正确的签名</div><div class="line">     *</div><div class="line">     * <span class="doctag">@param</span> realCer</div><div class="line">     */</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setRealCer</span><span class="params">(String realCer)</span> </span>&#123;</div><div class="line">        <span class="keyword">this</span>.realCer = realCer;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">/**</span></div><div class="line">     * 获取应用的签名</div><div class="line">     *</div><div class="line">     * <span class="doctag">@return</span></div><div class="line">     */</div><div class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getCertificateSHA1Fingerprint</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="comment">//获取包管理器</span></div><div class="line">        PackageManager pm = context.getPackageManager();</div><div class="line"></div><div class="line">        <span class="comment">//获取当前要获取 SHA1 值的包名，也可以用其他的包名，但需要注意，</span></div><div class="line">        <span class="comment">//在用其他包名的前提是，此方法传递的参数 Context 应该是对应包的上下文。</span></div><div class="line">        String packageName = context.getPackageName();</div><div class="line"></div><div class="line">        <span class="comment">//返回包括在包中的签名信息</span></div><div class="line">        <span class="keyword">int</span> flags = PackageManager.GET_SIGNATURES;</div><div class="line"></div><div class="line">        PackageInfo packageInfo = <span class="keyword">null</span>;</div><div class="line"></div><div class="line">        <span class="keyword">try</span> &#123;</div><div class="line">            <span class="comment">//获得包的所有内容信息类</span></div><div class="line">            packageInfo = pm.getPackageInfo(packageName, flags);</div><div class="line">        &#125; <span class="keyword">catch</span> (PackageManager.NameNotFoundException e) &#123;</div><div class="line">            e.printStackTrace();</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="comment">//签名信息</span></div><div class="line">        Signature[] signatures = packageInfo.signatures;</div><div class="line">        <span class="keyword">byte</span>[] cert = signatures[<span class="number">0</span>].toByteArray();</div><div class="line"></div><div class="line">        <span class="comment">//将签名转换为字节数组流</span></div><div class="line">        InputStream input = <span class="keyword">new</span> ByteArrayInputStream(cert);</div><div class="line"></div><div class="line">        <span class="comment">//证书工厂类，这个类实现了出厂合格证算法的功能</span></div><div class="line">        CertificateFactory cf = <span class="keyword">null</span>;</div><div class="line"></div><div class="line">        <span class="keyword">try</span> &#123;</div><div class="line">            cf = CertificateFactory.getInstance(<span class="string">"X509"</span>);</div><div class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</div><div class="line">            e.printStackTrace();</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="comment">//X509 证书，X.509 是一种非常通用的证书格式</span></div><div class="line">        X509Certificate c = <span class="keyword">null</span>;</div><div class="line"></div><div class="line">        <span class="keyword">try</span> &#123;</div><div class="line">            c = (X509Certificate) cf.generateCertificate(input);</div><div class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</div><div class="line">            e.printStackTrace();</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        String hexString = <span class="keyword">null</span>;</div><div class="line"></div><div class="line">        <span class="keyword">try</span> &#123;</div><div class="line">            <span class="comment">//加密算法的类，这里的参数可以使 MD4,MD5 等加密算法</span></div><div class="line">            MessageDigest md = MessageDigest.getInstance(<span class="string">"SHA1"</span>);</div><div class="line"></div><div class="line">            <span class="comment">//获得公钥</span></div><div class="line">            <span class="keyword">byte</span>[] publicKey = md.digest(c.getEncoded());</div><div class="line"></div><div class="line">            <span class="comment">//字节到十六进制的格式转换</span></div><div class="line">            hexString = byte2HexFormatted(publicKey);</div><div class="line"></div><div class="line">        &#125; <span class="keyword">catch</span> (NoSuchAlgorithmException e1) &#123;</div><div class="line">            e1.printStackTrace();</div><div class="line">        &#125; <span class="keyword">catch</span> (CertificateEncodingException e) &#123;</div><div class="line">            e.printStackTrace();</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> hexString;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">//这里是将获取到得编码进行16 进制转换</span></div><div class="line">    <span class="function"><span class="keyword">private</span> String <span class="title">byte2HexFormatted</span><span class="params">(<span class="keyword">byte</span>[] arr)</span> </span>&#123;</div><div class="line"></div><div class="line">        StringBuilder str = <span class="keyword">new</span> StringBuilder(arr.length * <span class="number">2</span>);</div><div class="line"></div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;arr.length; i++) &#123;</div><div class="line">            String h = Integer.toHexString(arr[i]);</div><div class="line">            <span class="keyword">int</span> l =h.length();</div><div class="line">            <span class="keyword">if</span> (l == <span class="number">1</span>)</div><div class="line">                h = <span class="string">"0"</span> + h;</div><div class="line">            <span class="keyword">if</span> (l &gt; <span class="number">2</span>)</div><div class="line">                h = h.substring(l - <span class="number">2</span>, l);</div><div class="line">            str.append(h.toUpperCase());</div><div class="line">            <span class="keyword">if</span> (i &lt; (arr.length - <span class="number">1</span>))</div><div class="line">                str.append(<span class="string">':'</span>);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> str.toString();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">/**</span></div><div class="line">     * 检测签名是否正确</div><div class="line">     * <span class="doctag">@return</span> true 签名正常 false 签名不正常</div><div class="line">     */</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">check</span><span class="params">()</span> </span>&#123;</div><div class="line"></div><div class="line">        <span class="keyword">if</span> (<span class="keyword">this</span>.realCer != <span class="keyword">null</span>) &#123;</div><div class="line">            cer = cer.trim();</div><div class="line">            realCer = realCer.trim();</div><div class="line">            <span class="keyword">if</span> (<span class="keyword">this</span>.cer.equals(<span class="keyword">this</span>.realCer)) &#123;</div><div class="line">                <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">            &#125;</div><div class="line">        &#125;<span class="keyword">else</span> &#123;</div><div class="line">            Log.e(TAG, <span class="string">"未给定真实的签名 SHA-1 值"</span>);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><strong>使用方法：</strong><br>    首先使用 keytool 获取签名的 sha-1 值，命令为 keytool -list -v -keystore xxx.jks （将 xx.jks 换成你的应用签名所用文件， 这里会提示输入 keystore 的密码  ps：签名文件在eclipse 是 .keystore 文件， 在 Android Studio中就是 .jks 文件））</p>
+<p>然后使用如下代码校验签名：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">SignCheck signCheck = <span class="keyword">new</span> SignCheck(<span class="keyword">this</span>,<span class="string">"27:19:6E:38:6B:87:5E:76:AD:F7:00:E7:EA:84:E4:C6:EE:E3:3D:FA"</span>);</div><div class="line">  <span class="keyword">if</span>(signCheck.check()) &#123;</div><div class="line">  <span class="comment">//TODO 签名正常</span></div><div class="line">  &#125;<span class="keyword">else</span>                &#123;</div><div class="line">  <span class="comment">//TODO 签名不正确</span></div><div class="line">  newAlertDialog.Builder(<span class="keyword">this</span>).setMessage(<span class="string">"请前往官方渠道下载正版 app， http://....."</span>).setPositiveButton(<span class="string">"确定"</span>,<span class="keyword">null</span>).show();</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
+<h2 id="Dex文件校验"><a href="#Dex文件校验" class="headerlink" title="Dex文件校验"></a>Dex文件校验</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">boolean</span> <span class="title">checkcrc</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="keyword">boolean</span> checkResult = <span class="keyword">false</span>;</div><div class="line">    <span class="keyword">long</span> crc = Long.parseLong(getString(R.string.crc));<span class="comment">//获取字符资源中预埋的crc值</span></div><div class="line">    ZipFile zf;</div><div class="line">    <span class="keyword">try</span>&#123;</div><div class="line">        String path = getApplicationContext().getPackageCodePath();<span class="comment">//获取apk安装路径</span></div><div class="line">        zf = <span class="keyword">new</span> ZipFile(path);<span class="comment">//将apk封装成zip对象</span></div><div class="line">        ZipEntry ze = zf.getEntry(<span class="string">"classes.dex"</span>);<span class="comment">//获取apk中的classes.dex</span></div><div class="line">        <span class="keyword">long</span> CurrentCRC = ze.getCrc();<span class="comment">//计算当前应用classes.dex的crc值</span></div><div class="line">        <span class="keyword">if</span>(CurrentCRC != crc)&#123;<span class="comment">//crc值对比</span></div><div class="line">            checkResult = <span class="keyword">true</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;<span class="keyword">catch</span>(IOException e)&#123;</div><div class="line">        handleError();</div><div class="line">        checkResult = <span class="keyword">false</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> checkResult;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -190,94 +218,88 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/02/12/拿来即用：Android-App签名校验和Dex文件校验/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/02/11/应用开发小技巧速查/" class="archive-article-date">
-  	<time datetime="2017-02-11T00:48:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-11</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/02/11/应用开发小技巧速查/">Android开发小技巧速查整理</a>
-    </h1>
+  
+    <a href="/2017/02/11/应用开发小技巧速查/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Android开发小技巧速查整理</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+  
+    <div class="duoshuo"></div>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Tips</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-      
-        </div></section>
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/05/11/hello-world/" class="archive-article-date">
-  	<time datetime="2016-05-11T10:30:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-05-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/05/11/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -300,8 +322,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

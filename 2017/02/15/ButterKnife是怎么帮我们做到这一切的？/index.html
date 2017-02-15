@@ -6,7 +6,7 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>&#39;ButterKnife是怎么帮我们做到这一切的？&#39; | Hirah&#39;s Blog</title>
+  <title>ButterKnife是怎么帮我们做到这一切的？ | Hirah&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="职责划分在分析原理之前我们可以根据职责将功能实现分为两个部分
 
@@ -19,7 +19,7 @@
 SOURCE： 源码时保留，大多在起校验作用。如：Override、Deprecated
 RUNTIME运行时保留，可以通过反射机制读取">
 <meta property="og:type" content="article">
-<meta property="og:title" content="'ButterKnife是怎么帮我们做到这一切的？'">
+<meta property="og:title" content="ButterKnife是怎么帮我们做到这一切的？">
 <meta property="og:url" content="http://yoursite.com/2017/02/15/ButterKnife是怎么帮我们做到这一切的？/index.html">
 <meta property="og:site_name" content="Hirah's Blog">
 <meta property="og:description" content="职责划分在分析原理之前我们可以根据职责将功能实现分为两个部分
@@ -38,9 +38,9 @@ RUNTIME运行时保留，可以通过反射机制读取">
 <meta property="og:image" content="http://ol8oi6yv0.bkt.clouddn.com/static/images/ButterKnifeImage%284%29.png">
 <meta property="og:image" content="http://ol8oi6yv0.bkt.clouddn.com/static/images/ButterKnifeImage%285%29.png">
 <meta property="og:image" content="http://ol8oi6yv0.bkt.clouddn.com/static/images/ButterKnifeImage%287%29.png">
-<meta property="og:updated_time" content="2017-02-15T14:25:02.631Z">
+<meta property="og:updated_time" content="2017-02-15T14:28:59.712Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="'ButterKnife是怎么帮我们做到这一切的？'">
+<meta name="twitter:title" content="ButterKnife是怎么帮我们做到这一切的？">
 <meta name="twitter:description" content="职责划分在分析原理之前我们可以根据职责将功能实现分为两个部分
 
 编译期对源代码进行处理，动态生成ViewBinder类。
@@ -176,7 +176,7 @@ RUNTIME运行时保留，可以通过反射机制读取">
         
   
     <h1 class="article-title" itemprop="name">
-      &#39;ButterKnife是怎么帮我们做到这一切的？&#39;
+      ButterKnife是怎么帮我们做到这一切的？
     </h1>
   
 
@@ -202,6 +202,7 @@ RUNTIME运行时保留，可以通过反射机制读取">
 <li>CLASS：编译时保留，在class文件中有效，可以在编译时用来生成辅助代码</li>
 </ul>
 </blockquote>
+<a id="more"></a>
 <h4 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h4><p>一般来说依赖注入框架常使用的套路都是运行时通过反射完成注入，不过这样的话对性能影响很大。</p>
 <p>而我们今天的ButterKnife则完全避开了这个问题，它使用的是一个名叫编译时解析技术，也就是APT（Anotation Processing Tool）。</p>
 <p>这种技术是说在编译器开始工作的时候，会自动查找代码中所有表明生命周期为CLASS的注解，然后找到该注解注册的Processor类，主动调用这个类的process()方法。</p>

@@ -6,14 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2016 | Hirah&#39;s Blog</title>
+  <title>使用Netty框架实现Andorid长连接 | Hirah&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hirah's Blog">
-<meta property="og:url" content="http://yoursite.com/archives/2016/index.html">
+  <meta name="description" content="NIO，即Non Blocking IO，非阻塞IO，在JAVA中NIO的核心就是Selector机制。简单而言，创建一个Socket Channel，并将其注册到一个Selector上（多路复用器），这个Selector将会“关注”Channel上发生的IO读写事件，并在事件发生（数据就绪）后执行相关的处理逻辑。对于阻塞IO，它需要在read()、write()操作上阻塞而直到数据操作完毕，但">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用Netty框架实现Andorid长连接">
+<meta property="og:url" content="http://yoursite.com/2016/10/20/Andorid长连接具体实现方式/index.html">
 <meta property="og:site_name" content="Hirah's Blog">
+<meta property="og:description" content="NIO，即Non Blocking IO，非阻塞IO，在JAVA中NIO的核心就是Selector机制。简单而言，创建一个Socket Channel，并将其注册到一个Selector上（多路复用器），这个Selector将会“关注”Channel上发生的IO读写事件，并在事件发生（数据就绪）后执行相关的处理逻辑。对于阻塞IO，它需要在read()、write()操作上阻塞而直到数据操作完毕，但">
+<meta property="og:updated_time" content="2017-02-19T06:45:22.198Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hirah's Blog">
+<meta name="twitter:title" content="使用Netty框架实现Andorid长连接">
+<meta name="twitter:description" content="NIO，即Non Blocking IO，非阻塞IO，在JAVA中NIO的核心就是Selector机制。简单而言，创建一个Socket Channel，并将其注册到一个Selector上（多路复用器），这个Selector将会“关注”Channel上发生的IO读写事件，并在事件发生（数据就绪）后执行相关的处理逻辑。对于阻塞IO，它需要在read()、write()操作上阻塞而直到数据操作完毕，但">
   
     <link rel="alternative" href="/atom.xml" title="Hirah&#39;s Blog" type="application/atom+xml">
   
@@ -131,150 +135,91 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Andorid长连接具体实现方式" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/11/13/Android-mp3和amr音频数据采集/" class="archive-article-date">
-  	<time datetime="2016-11-13T14:07:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-13</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/11/13/Android-mp3和amr音频数据采集/">Mp3和Amr音频数据采集</a>
+    <h1 class="article-title" itemprop="name">
+      使用Netty框架实现Andorid长连接
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/11/11/框架初步使用与安全检测/" class="archive-article-date">
-  	<time datetime="2016-11-11T02:18:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/11/11/框架初步使用与安全检测/">使用xposed框架进行安全检测</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">应用安全</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/11/06/拿来即用：Android-App签名校验和Dex文件校验/" class="archive-article-date">
-  	<time datetime="2016-11-06T00:24:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/11/06/拿来即用：Android-App签名校验和Dex文件校验/">拿来即用：App签名校验和Dex文件校验</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">应用安全</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/10/20/Andorid长连接具体实现方式/" class="archive-article-date">
+        
+        <a href="/2016/10/20/Andorid长连接具体实现方式/" class="archive-article-date">
   	<time datetime="2016-10-20T14:07:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-10-20</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/10/20/Andorid长连接具体实现方式/">使用Netty框架实现Andorid长连接</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>NIO，即Non Blocking IO，非阻塞IO，在JAVA中NIO的核心就是Selector机制。简单而言，创建一个Socket Channel，并将其注册到一个Selector上（多路复用器），这个Selector将会“关注”Channel上发生的IO读写事件，并在事件发生（数据就绪）后执行相关的处理逻辑。对于阻塞IO，它需要在read()、write()操作上阻塞而直到数据操作完毕，但是NIO则不需要，只有当Selector检测到此Channel上有事件时才会触发调用read、write操作。</p>
+</blockquote>
+<h2 id="需要实现的功能"><a href="#需要实现的功能" class="headerlink" title="需要实现的功能"></a>需要实现的功能</h2><ul>
+<li>创建后台服务，在服务中和服务器建立长连接</li>
+<li>定时发送心跳包</li>
+<li>断线重连机制</li>
+</ul>
+<a id="more"></a>
+<h2 id="具体思路："><a href="#具体思路：" class="headerlink" title="具体思路："></a>具体思路：</h2><ul>
+<li>使用IdleStateHandler来检测读写操作的空闲时间</li>
+<li>客户端write空闲5s后向服务端发送一个心跳包</li>
+<li>在发送下一个心跳包之前，未收到服务端应答，失败计数器加一</li>
+<li>收到服务端应答，失败计数器清零</li>
+<li>超过没有收到应答最大次数后断开连接</li>
+<li>重新和服务器建立连接，如果连接失败，会在固定时间间隔之后重新连接。</li>
+</ul>
+<h2 id="具体实现"><a href="#具体实现" class="headerlink" title="具体实现"></a>具体实现</h2><ul>
+<li>引入包</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">dependencies &#123;</div><div class="line">      compile <span class="string">'io.netty:netty-all:5.0.0.Alpha2'</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>初始化Clinet服务，和后台建立长连接</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">startServer</span><span class="params">()</span> </span>&#123;</div><div class="line">    eventLoopGroup = <span class="keyword">new</span> NioEventLoopGroup();</div><div class="line">    <span class="comment">// Client服务启动器 3.x的ClientBootstrap</span></div><div class="line">    <span class="comment">// 改为Bootstrap，且构造函数变化很大，这里用无参构造。</span></div><div class="line">    bootstrap = <span class="keyword">new</span> Bootstrap();</div><div class="line">    <span class="keyword">try</span> &#123;</div><div class="line">        <span class="comment">// 指定channel类型</span></div><div class="line">        bootstrap.channel(NioSocketChannel.class);</div><div class="line">        <span class="comment">//设置TCP协议的属性</span></div><div class="line">        bootstrap.option(ChannelOption.SO_KEEPALIVE, <span class="keyword">true</span>);</div><div class="line">        <span class="comment">// 指定EventLoopGroup</span></div><div class="line">        bootstrap.group(eventLoopGroup);</div><div class="line">        <span class="comment">//指定地址</span></div><div class="line">        bootstrap.remoteAddress(ConstsNet.host, ConstsNet.port);</div><div class="line">        <span class="comment">// 指定Handler</span></div><div class="line">        bootstrap.handler(<span class="keyword">new</span> ChannelInitializer&lt;SocketChannel&gt;() &#123;</div><div class="line">            <span class="meta">@Override</span></div><div class="line">            <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">initChannel</span><span class="params">(SocketChannel socketChannel)</span> <span class="keyword">throws</span> Exception </span>&#123;</div><div class="line">                <span class="comment">//回行换车解码器</span></div><div class="line">                socketChannel.pipeline().addLast(<span class="keyword">new</span> LineBasedFrameDecoder(<span class="number">2048</span>));</div><div class="line">              	<span class="comment">//自定义数据编解码器</span></div><div class="line">                socketChannel.pipeline().addLast(<span class="keyword">new</span> DataDecoder());</div><div class="line">                socketChannel.pipeline().addLast(<span class="keyword">new</span> DataEncoder());</div><div class="line">                <span class="comment">// 自己的逻辑Handler</span></div><div class="line">                socketChannel.pipeline().addLast(<span class="keyword">new</span> KeepAliveServerInitializer());</div><div class="line">            &#125;</div><div class="line">        &#125;);</div><div class="line">        <span class="comment">//同步创建连接</span></div><div class="line">        ChannelFuture future = bootstrap.connect(ConstsNet.host, ConstsNet.port).sync();</div><div class="line">        <span class="keyword">if</span> (future.isSuccess()) &#123;</div><div class="line">            <span class="comment">//Channel中所有的操作均是异步的，IO操作都会返回一个ChannelFuture实例：</span></div><div class="line">            socketChannel = (SocketChannel) future.channel();</div><div class="line">            <span class="comment">//发送心跳包</span></div><div class="line">            socketChannel.writeAndFlush(&#123;code:<span class="string">'login'</span>&#125;);</div><div class="line">        &#125;</div><div class="line">    &#125; <span class="keyword">catch</span> (Exception e) &#123;</div><div class="line">        e.printStackTrace();</div><div class="line">        Utils.showToast(<span class="keyword">this</span>, getResources().getString(R.string.action_networke));</div><div class="line">        <span class="keyword">if</span> (!isStop) &#123;</div><div class="line">          	<span class="comment">//出错之后开启断线重连</span></div><div class="line">            connServer();</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>创建延迟任务，以固定的时间间隔重新连接服务器</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">connServer</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="keyword">try</span> &#123;</div><div class="line">        isStop = <span class="keyword">false</span>;</div><div class="line">        <span class="keyword">if</span> (executorService != <span class="keyword">null</span>) &#123;</div><div class="line">            executorService.shutdown();</div><div class="line">        &#125;</div><div class="line">        executorService = Executors.newScheduledThreadPool(<span class="number">1</span>);</div><div class="line">        <span class="comment">//本次任务执行完成后，需要延迟设定的延迟时间，才会执行新的任务</span></div><div class="line">        executorService.scheduleWithFixedDelay(<span class="keyword">new</span> Runnable() &#123;</div><div class="line"></div><div class="line">            <span class="keyword">boolean</span> isConnSucc = <span class="keyword">true</span>;</div><div class="line"></div><div class="line">            <span class="meta">@Override</span></div><div class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</div><div class="line">                <span class="keyword">try</span> &#123;</div><div class="line">                    <span class="comment">// 重置计数器</span></div><div class="line">                    unRecPongTimes = <span class="number">0</span>;</div><div class="line">                    <span class="comment">// 连接服务端</span></div><div class="line">                    <span class="keyword">if</span> (socketChannel != <span class="keyword">null</span> &amp;&amp; socketChannel.isOpen()) &#123;</div><div class="line">                        socketChannel.close();</div><div class="line">                    &#125;</div><div class="line">                    ChannelFuture future = bootstrap.connect(ConstsNet.host, ConstsNet.port).sync();</div><div class="line">                    <span class="keyword">if</span> (future.isSuccess()) &#123;</div><div class="line">                        socketChannel = (SocketChannel) future.channel();</div><div class="line">                        socketChannel.writeAndFlush(&#123;code:<span class="string">'login'</span>&#125;);</div><div class="line">                    &#125;</div><div class="line">                &#125; <span class="keyword">catch</span> (Exception e) &#123;</div><div class="line">                    e.printStackTrace();</div><div class="line">                    isConnSucc = <span class="keyword">false</span>;</div><div class="line">                &#125; <span class="keyword">finally</span> &#123;</div><div class="line">                    <span class="keyword">if</span> (isConnSucc) &#123;</div><div class="line">                        <span class="keyword">if</span> (executorService != <span class="keyword">null</span>) &#123;</div><div class="line">                            <span class="comment">//如果连接成功 关闭延时任务</span></div><div class="line">                            executorService.shutdown();</div><div class="line">                        &#125;</div><div class="line">                    &#125;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;, RE_CONN_WAIT_SECONDS, RE_CONN_WAIT_SECONDS, TimeUnit.SECONDS);</div><div class="line">    &#125; <span class="keyword">catch</span> (Exception e) &#123;</div><div class="line">        e.printStackTrace();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>设置心跳包发送间隔和心跳包Handler</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">private</span> <span class="class"><span class="keyword">class</span> <span class="title">KeepAliveServerInitializer</span> <span class="keyword">extends</span> <span class="title">ChannelInitializer</span>&lt;<span class="title">SocketChannel</span>&gt; </span>&#123;</div><div class="line"></div><div class="line">        <span class="meta">@Override</span></div><div class="line">        <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">initChannel</span><span class="params">(SocketChannel ch)</span> <span class="keyword">throws</span> Exception </span>&#123;</div><div class="line">            ch.pipeline().addLast(<span class="keyword">new</span> LineBasedFrameDecoder(<span class="number">2048</span>));</div><div class="line">            <span class="comment">//检测读写操作的空闲时间</span></div><div class="line">            ch.pipeline().addLast(<span class="keyword">new</span> IdleStateHandler(<span class="number">0</span>, WRITE_WAIT_SECONDS, <span class="number">0</span>));</div><div class="line">            ch.pipeline().addLast(<span class="keyword">new</span> DataDecoder());</div><div class="line">            ch.pipeline().addLast(<span class="keyword">new</span> DataEncoder());</div><div class="line">            <span class="comment">//设置心跳处理器</span></div><div class="line">            ch.pipeline().addLast(<span class="keyword">new</span> Heartbeat());</div><div class="line">        &#125;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>心跳包处理器</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">private</span> <span class="class"><span class="keyword">class</span> <span class="title">Heartbeat</span> <span class="keyword">extends</span> <span class="title">SimpleChannelInboundHandler</span>&lt;<span class="title">String</span>&gt; </span>&#123;</div><div class="line"></div><div class="line">       JSONObject data;</div><div class="line"></div><div class="line">       <span class="comment">/**</span></div><div class="line">        * 每一次收到消息时触发。</div><div class="line">        * <span class="doctag">@param</span> ctx</div><div class="line">        * <span class="doctag">@param</span> msg</div><div class="line">        * <span class="doctag">@throws</span> Exception</div><div class="line">        */</div><div class="line">       <span class="meta">@Override</span></div><div class="line">       <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">messageReceived</span><span class="params">(ChannelHandlerContext ctx, String msg)</span> <span class="keyword">throws</span> Exception </span>&#123;</div><div class="line">           <span class="keyword">if</span> (msg == <span class="keyword">null</span>) &#123;</div><div class="line">               <span class="keyword">return</span>;</div><div class="line">           &#125;</div><div class="line">           data = <span class="keyword">new</span> JSONObject(msg);</div><div class="line">           <span class="keyword">if</span> (!data.has(<span class="string">"code"</span>)) &#123;</div><div class="line">               <span class="keyword">return</span>;</div><div class="line">           &#125;</div><div class="line">           <span class="comment">// 失败计数器清零</span></div><div class="line">           unRecPongTimes = <span class="number">0</span>;</div><div class="line">          <span class="comment">//处理从服务端接收到的消息 TODO</span></div><div class="line">       &#125;</div><div class="line"></div><div class="line">       <span class="comment">//如果在指定的时间内容没有write事件，就会触发该方法</span></div><div class="line">       <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">userEventTriggered</span><span class="params">(ChannelHandlerContext ctx, Object evt)</span> <span class="keyword">throws</span> Exception </span>&#123;</div><div class="line">           <span class="keyword">if</span> (evt <span class="keyword">instanceof</span> IdleStateEvent) &#123;</div><div class="line">               IdleStateEvent event = (IdleStateEvent) evt;</div><div class="line">               <span class="keyword">if</span> (event.state() == IdleState.READER_IDLE) &#123;</div><div class="line">                   Logger.i(<span class="string">"读超时)"</span>);</div><div class="line">               &#125; <span class="keyword">else</span> <span class="keyword">if</span> (event.state() == IdleState.WRITER_IDLE) &#123;</div><div class="line">                   <span class="keyword">if</span> (unRecPongTimes &lt; MAX_UN_REC_PONG_TIMES) &#123;</div><div class="line">                       <span class="comment">//发送下一个心跳包，检测服务端是否还存活</span></div><div class="line">                       ctx.channel().writeAndFlush(<span class="string">"&#123;code:'ping'&#125;"</span>);</div><div class="line">                       unRecPongTimes++;</div><div class="line">                   &#125; <span class="keyword">else</span> &#123;</div><div class="line">                       ctx.channel().close();</div><div class="line">                   &#125;</div><div class="line">               &#125; <span class="keyword">else</span> <span class="keyword">if</span> (event.state() == IdleState.ALL_IDLE) &#123;</div><div class="line">                   <span class="comment">/*总超时*/</span></div><div class="line">                   Logger.i(<span class="string">"总超时)"</span>);</div><div class="line">               &#125;</div><div class="line">           &#125;</div><div class="line">       &#125;</div><div class="line"></div><div class="line">       <span class="meta">@Override</span></div><div class="line">       <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">exceptionCaught</span><span class="params">(ChannelHandlerContext ctx, Throwable cause)</span> <span class="keyword">throws</span> Exception </span>&#123;</div><div class="line">           Logger.i(<span class="string">"错误原因："</span> + cause.getMessage());</div><div class="line">           <span class="keyword">if</span> (data != <span class="keyword">null</span>) &#123;</div><div class="line">           &#125;</div><div class="line">           ctx.channel().close();</div><div class="line">       &#125;</div><div class="line"></div><div class="line">       <span class="meta">@Override</span></div><div class="line">       <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">channelActive</span><span class="params">(ChannelHandlerContext ctx)</span> <span class="keyword">throws</span> Exception </span>&#123;</div><div class="line">           <span class="keyword">super</span>.channelActive(ctx);</div><div class="line">       &#125;</div><div class="line"></div><div class="line">       <span class="comment">/**</span></div><div class="line">        * 连接断开</div><div class="line">        * <span class="doctag">@param</span> ctx</div><div class="line">        * <span class="doctag">@throws</span> Exception</div><div class="line">        */</div><div class="line">       <span class="meta">@Override</span></div><div class="line">       <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">channelInactive</span><span class="params">(ChannelHandlerContext ctx)</span> <span class="keyword">throws</span> Exception </span>&#123;</div><div class="line">           ctx.close();</div><div class="line">            <span class="comment">/*</span></div><div class="line">            * 重连</div><div class="line">         */</div><div class="line">           <span class="keyword">if</span> (!isStop) &#123;</div><div class="line">               connServer();</div><div class="line">           &#125;</div><div class="line">           Logger.i(<span class="string">"客户端失效"</span>);</div><div class="line">       &#125;</div><div class="line">   &#125;</div></pre></td></tr></table></figure>
+      
 
-        <div class="article-info info-on-right">
-          
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -286,84 +231,97 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2016/10/20/Andorid长连接具体实现方式/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/10/12/应用开发小技巧速查/" class="archive-article-date">
-  	<time datetime="2016-10-12T00:48:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-10-12</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/10/12/应用开发小技巧速查/">Android开发小技巧速查整理</a>
-    </h1>
+    <a href="/2016/11/06/拿来即用：Android-App签名校验和Dex文件校验/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          拿来即用：App签名校验和Dex文件校验
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/10/12/应用开发小技巧速查/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Android开发小技巧速查整理</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+  
+    <div class="duoshuo"></div>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Tips</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/10/11/hello-world/" class="archive-article-date">
-  	<time datetime="2016-10-11T10:30:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-10-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/10/11/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -386,8 +344,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

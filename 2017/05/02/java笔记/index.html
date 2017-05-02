@@ -8,39 +8,42 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>java笔记 | Hirah&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Java笔记1.HashMap和HashTable的区别
-[ ] HashMap去掉了contains方法
-[ ] HashTable是同步的(线程安全)
-[ ] HashMap允许空键值
-[ ] HashMap执行快速失败机制
-[ ] Fast-fail机制:在使用迭代器的过程中有其它线程修改了集合对象结构或元素数量,都将抛出ConcurrentModifiedException
+  <meta name="description" content="1.HashMap和HashTable的区别
+HashMap去掉了contains方法
+HashTable是同步的(线程安全)
+HashMap允许空键值
+HashMap执行快速失败机制
+Fast-fail机制:在使用迭代器的过程中有其它线程修改了集合对象结构或元素数量,都将抛出ConcurrentModifiedException
 
-HashMa">
+
+HashMap几乎可以等价于Hashtable，除了HashM">
 <meta property="og:type" content="article">
 <meta property="og:title" content="java笔记">
 <meta property="og:url" content="http://yoursite.com/2017/05/02/java笔记/index.html">
 <meta property="og:site_name" content="Hirah's Blog">
-<meta property="og:description" content="Java笔记1.HashMap和HashTable的区别
-[ ] HashMap去掉了contains方法
-[ ] HashTable是同步的(线程安全)
-[ ] HashMap允许空键值
-[ ] HashMap执行快速失败机制
-[ ] Fast-fail机制:在使用迭代器的过程中有其它线程修改了集合对象结构或元素数量,都将抛出ConcurrentModifiedException
+<meta property="og:description" content="1.HashMap和HashTable的区别
+HashMap去掉了contains方法
+HashTable是同步的(线程安全)
+HashMap允许空键值
+HashMap执行快速失败机制
+Fast-fail机制:在使用迭代器的过程中有其它线程修改了集合对象结构或元素数量,都将抛出ConcurrentModifiedException
 
-HashMa">
+
+HashMap几乎可以等价于Hashtable，除了HashM">
 <meta property="og:image" content="http://uploadfiles.nowcoder.com/images/20151010/214250_1444467985224_6A144C1382BBEF1BE30E9B91BC2973C8">
 <meta property="og:image" content="http://uploadfiles.nowcoder.com/images/20150328/138512_1427527478646_1.png">
-<meta property="og:updated_time" content="2017-05-02T02:29:16.000Z">
+<meta property="og:updated_time" content="2017-05-02T02:36:07.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java笔记">
-<meta name="twitter:description" content="Java笔记1.HashMap和HashTable的区别
-[ ] HashMap去掉了contains方法
-[ ] HashTable是同步的(线程安全)
-[ ] HashMap允许空键值
-[ ] HashMap执行快速失败机制
-[ ] Fast-fail机制:在使用迭代器的过程中有其它线程修改了集合对象结构或元素数量,都将抛出ConcurrentModifiedException
+<meta name="twitter:description" content="1.HashMap和HashTable的区别
+HashMap去掉了contains方法
+HashTable是同步的(线程安全)
+HashMap允许空键值
+HashMap执行快速失败机制
+Fast-fail机制:在使用迭代器的过程中有其它线程修改了集合对象结构或元素数量,都将抛出ConcurrentModifiedException
 
-HashMa">
+
+HashMap几乎可以等价于Hashtable，除了HashM">
 <meta name="twitter:image" content="http://uploadfiles.nowcoder.com/images/20151010/214250_1444467985224_6A144C1382BBEF1BE30E9B91BC2973C8">
   
     <link rel="alternative" href="/atom.xml" title="Hirah&#39;s Blog" type="application/atom+xml">
@@ -190,20 +193,20 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Java笔记"><a href="#Java笔记" class="headerlink" title="Java笔记"></a>Java笔记</h2><h4 id="1-HashMap和HashTable的区别"><a href="#1-HashMap和HashTable的区别" class="headerlink" title="1.HashMap和HashTable的区别"></a>1.HashMap和HashTable的区别</h4><ul>
-<li>[ ] HashMap去掉了contains方法</li>
-<li>[ ] HashTable是<strong>同步</strong>的(线程安全)</li>
-<li>[ ] HashMap允许空键值</li>
-<li>[ ] HashMap执行快速失败机制</li>
-<li><p>[ ] <code>Fast-fail</code>机制:在使用迭代器的过程中有其它线程修改了集合对象结构或元素数量,都将抛出ConcurrentModifiedException</p>
-</li>
-<li><p>HashMap几乎可以等价于Hashtable，除了HashMap是非synchronized的，并可以接受null(HashMap可以接受为null的键值(key)和值(value)，而Hashtable则不行)。</p>
-</li>
+        <h4 id="1-HashMap和HashTable的区别"><a href="#1-HashMap和HashTable的区别" class="headerlink" title="1.HashMap和HashTable的区别"></a>1.HashMap和HashTable的区别</h4><ol>
+<li>HashMap去掉了contains方法</li>
+<li>HashTable是<strong>同步</strong>的(线程安全)</li>
+<li>HashMap允许空键值</li>
+<li>HashMap执行快速失败机制</li>
+<li><code>Fast-fail</code>机制:在使用迭代器的过程中有其它线程修改了集合对象结构或元素数量,都将抛出ConcurrentModifiedException</li>
+</ol>
+<ul>
+<li>HashMap几乎可以等价于Hashtable，除了HashMap是非synchronized的，并可以接受null(HashMap可以接受为null的键值(key)和值(value)，而Hashtable则不行)。</li>
 </ul>
-<a id="more"></a>
 <ul>
 <li>Hashtable和HashMap有几个主要的不同：<strong>线程安全以及速度</strong>。仅在你需要完全的线程安全的时候使用Hashtable，而如果你使用Java 5或以上的话，请使用<strong>ConcurrentHashMap</strong>吧。</li>
 </ul>
+<a id="more"></a>
 <h4 id="2-java的线程安全类"><a href="#2-java的线程安全类" class="headerlink" title="2.java的线程安全类"></a>2.java的线程安全类</h4><p>Vector、Stack、HashTable、ConcurrentHashMap、Properties</p>
 <h4 id="3-java集合框架"><a href="#3-java集合框架" class="headerlink" title="3.java集合框架"></a>3.java集合框架</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">Collection - List - ArrayList</div><div class="line">Collection - List - LinkedList</div><div class="line">Collection - List - Vector</div><div class="line">Collection - List - Vector - Stack</div><div class="line">Collection - Set - HashSet</div><div class="line">Collection - Set - TreeSet</div><div class="line">Map - HashMap</div><div class="line">Map - TreeMap</div><div class="line">Map - HashTable</div></pre></td></tr></table></figure>
 <p>3.1 <code>ArrayList</code>的构造函数有三个</p>

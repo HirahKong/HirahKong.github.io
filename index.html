@@ -164,15 +164,18 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Java笔记"><a href="#Java笔记" class="headerlink" title="Java笔记"></a>Java笔记</h2><h4 id="1-HashMap和HashTable的区别"><a href="#1-HashMap和HashTable的区别" class="headerlink" title="1.HashMap和HashTable的区别"></a>1.HashMap和HashTable的区别</h4><ul>
-<li>[ ] HashMap去掉了contains方法</li>
-<li>[ ] HashTable是<strong>同步</strong>的(线程安全)</li>
-<li>[ ] HashMap允许空键值</li>
-<li>[ ] HashMap执行快速失败机制</li>
-<li><p>[ ] <code>Fast-fail</code>机制:在使用迭代器的过程中有其它线程修改了集合对象结构或元素数量,都将抛出ConcurrentModifiedException</p>
-</li>
-<li><p>HashMap几乎可以等价于Hashtable，除了HashMap是非synchronized的，并可以接受null(HashMap可以接受为null的键值(key)和值(value)，而Hashtable则不行)。</p>
-</li>
+        <h4 id="1-HashMap和HashTable的区别"><a href="#1-HashMap和HashTable的区别" class="headerlink" title="1.HashMap和HashTable的区别"></a>1.HashMap和HashTable的区别</h4><ol>
+<li>HashMap去掉了contains方法</li>
+<li>HashTable是<strong>同步</strong>的(线程安全)</li>
+<li>HashMap允许空键值</li>
+<li>HashMap执行快速失败机制</li>
+<li><code>Fast-fail</code>机制:在使用迭代器的过程中有其它线程修改了集合对象结构或元素数量,都将抛出ConcurrentModifiedException</li>
+</ol>
+<ul>
+<li>HashMap几乎可以等价于Hashtable，除了HashMap是非synchronized的，并可以接受null(HashMap可以接受为null的键值(key)和值(value)，而Hashtable则不行)。</li>
+</ul>
+<ul>
+<li>Hashtable和HashMap有几个主要的不同：<strong>线程安全以及速度</strong>。仅在你需要完全的线程安全的时候使用Hashtable，而如果你使用Java 5或以上的话，请使用<strong>ConcurrentHashMap</strong>吧。</li>
 </ul>
         
           <a class="article-more-a" href="/2017/05/02/java笔记/#more">more >></a>

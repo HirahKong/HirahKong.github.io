@@ -144,6 +144,157 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Andorid长连接具体实现方式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/20/Andorid长连接具体实现方式/">使用Netty框架实现Andorid长连接</a>
+    </h1>
+  
+
+        
+        <a href="/2016/10/20/Andorid长连接具体实现方式/" class="archive-article-date">
+  	<time datetime="2016-10-20T14:07:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-10-20</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>NIO，即Non Blocking IO，非阻塞IO，在JAVA中NIO的核心就是Selector机制。简单而言，创建一个Socket Channel，并将其注册到一个Selector上（多路复用器），这个Selector将会“关注”Channel上发生的IO读写事件，并在事件发生（数据就绪）后执行相关的处理逻辑。对于阻塞IO，它需要在read()、write()操作上阻塞而直到数据操作完毕，但是NIO则不需要，只有当Selector检测到此Channel上有事件时才会触发调用read、write操作。</p>
+</blockquote>
+<h2 id="需要实现的功能"><a href="#需要实现的功能" class="headerlink" title="需要实现的功能"></a>需要实现的功能</h2><ul>
+<li>创建后台服务，在服务中和服务器建立长连接</li>
+<li>定时发送心跳包</li>
+<li>断线重连机制</li>
+</ul>
+        
+          <a class="article-more-a" href="/2016/10/20/Andorid长连接具体实现方式/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2016/10/20/Andorid长连接具体实现方式/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-应用开发小技巧速查" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/12/应用开发小技巧速查/">Android开发小技巧速查整理</a>
+    </h1>
+  
+
+        
+        <a href="/2016/10/12/应用开发小技巧速查/" class="archive-article-date">
+  	<time datetime="2016-10-12T00:48:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-10-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li><p>Activity.startActivities() </p>
+<blockquote>
+<p> 常用于在应用程序中间启动其他的Activity。</p>
+</blockquote>
+</li>
+<li><p>TextUtils.isEmpty() </p>
+<blockquote>
+<p> 用于检测是否为空。</p>
+</blockquote>
+</li>
+<li><p>Html.fromHtml()</p>
+<blockquote>
+<p> 用于生成一个Html,参数可以是一个字符串</p>
+</blockquote>
+</li>
+</ul>
+        
+          <a class="article-more-a" href="/2016/10/12/应用开发小技巧速查/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Tips</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2016/10/12/应用开发小技巧速查/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -288,11 +439,11 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Tips</a>
+                <a href="javascript:void(0)" class="js-tag color5">应用安全</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">应用安全</a>
+                <a href="javascript:void(0)" class="js-tag color5">Tips</a>
               </li>
              
               <li class="article-tag-list-item">

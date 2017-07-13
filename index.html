@@ -144,6 +144,209 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-动态代理机制" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/07/13/动态代理机制/">动态代理机制</a>
+    </h1>
+  
+
+        
+        <a href="/2017/07/13/动态代理机制/" class="archive-article-date">
+  	<time datetime="2017-07-13T15:18:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-13</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="动态代理"><a href="#动态代理" class="headerlink" title="动态代理"></a>动态代理</h4><blockquote>
+<p>动态代理的优点有：</p>
+<ul>
+<li>隐藏委托类的实现</li>
+<li>解耦，不改变委托类代码情况下做一些额外处理</li>
+<li>方便对代理类的函数做统一或特殊处理</li>
+</ul>
+</blockquote>
+        
+          <a class="article-more-a" href="/2017/07/13/动态代理机制/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/07/13/动态代理机制/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-DCL单例" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/07/13/DCL单例/">DCL单例</a>
+    </h1>
+  
+
+        
+        <a href="/2017/07/13/DCL单例/" class="archive-article-date">
+  	<time datetime="2017-07-13T15:18:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-13</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="DCL单例-Double-Check-Lock"><a href="#DCL单例-Double-Check-Lock" class="headerlink" title="DCL单例(Double Check Lock)"></a>DCL单例(Double Check Lock)</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span> </span>&#123;   </div><div class="line">    </div><div class="line">    <span class="comment">/**  </div><div class="line">     * 单例对象实例  </div><div class="line">     */</span>  </div><div class="line">    <span class="keyword">private</span> <span class="keyword">volatile</span> <span class="keyword">static</span> Singleton instance = <span class="keyword">null</span>;   </div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton <span class="title">getInstance</span><span class="params">()</span> </span>&#123;   </div><div class="line">        <span class="keyword">if</span> (instance == <span class="keyword">null</span>) &#123;   </div><div class="line">            <span class="keyword">synchronized</span> (Singleton.class) &#123;   </div><div class="line">                <span class="keyword">if</span> (instance == <span class="keyword">null</span>) &#123;   </div><div class="line">                    instance = <span class="keyword">new</span> Singleton();   </div><div class="line">                &#125;   </div><div class="line">            &#125;   </div><div class="line">        &#125;   </div><div class="line">        <span class="keyword">return</span> instance;   </div><div class="line">    &#125;   </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2017/07/13/DCL单例/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/07/13/DCL单例/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-Retrofit 实现原理" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/07/13/Retrofit 实现原理/">Retrofit实现原理</a>
+    </h1>
+  
+
+        
+        <a href="/2017/07/13/Retrofit 实现原理/" class="archive-article-date">
+  	<time datetime="2017-07-13T15:18:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-13</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="Retrofit如何进行网络请求？"><a href="#Retrofit如何进行网络请求？" class="headerlink" title="Retrofit如何进行网络请求？"></a>Retrofit如何进行网络请求？</h4><blockquote>
+<p> 主要是用到了动态代理的方式</p>
+</blockquote>
+<h5 id="何为动态代理？"><a href="#何为动态代理？" class="headerlink" title="何为动态代理？"></a>何为动态代理？</h5><p>​    当你想要调用某个类的方法前，插入你想要执行的代码。</p>
+<p>​    比如你要执行某个操作前，你必须要判断这个用户是否登录，或者你在付款前，你需要判断这个人的账户中存在这么多钱。</p>
+        
+          <a class="article-more-a" href="/2017/07/13/Retrofit 实现原理/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">android</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/07/13/Retrofit 实现原理/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-桎梏" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -613,210 +816,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-Android-mp3和amr音频数据采集" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/11/13/Android-mp3和amr音频数据采集/">Mp3和Amr音频数据采集</a>
-    </h1>
-  
-
-        
-        <a href="/2016/11/13/Android-mp3和amr音频数据采集/" class="archive-article-date">
-  	<time datetime="2016-11-13T14:07:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-13</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="需求："><a href="#需求：" class="headerlink" title="需求："></a>需求：</h4><ul>
-<li>使用一份音频输入数据分别采样Mp3和Amr音频编码需要的数据。</li>
-</ul>
-<h4 id="前提条件："><a href="#前提条件：" class="headerlink" title="前提条件："></a>前提条件：</h4><ul>
-<li>Mp3文件需要采样率是44.1KHZ的音频数据流</li>
-<li>Amr文件需要采样率是8,000 Hz或者16,000 HZ采用率的音频数据流</li>
-</ul>
-<h4 id="具体实现："><a href="#具体实现：" class="headerlink" title="具体实现："></a>具体实现：</h4><ul>
-<li>创建音频采集线程，采样音频数据</li>
-</ul>
-        
-          <a class="article-more-a" href="/2016/11/13/Android-mp3和amr音频数据采集/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/11/13/Android-mp3和amr音频数据采集/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-框架初步使用与安全检测" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/11/11/框架初步使用与安全检测/">使用xposed框架进行安全检测</a>
-    </h1>
-  
-
-        
-        <a href="/2016/11/11/框架初步使用与安全检测/" class="archive-article-date">
-  	<time datetime="2016-11-11T02:18:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-11</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>首先在Root的手机上安装Xposed框架，然后新建一个android工程，不需要添加任何Activity。</p>
-<p>下载Xposed的jar包，然后在android工程app目录创建lib文件夹，将jar包放置进入并依赖。</p>
-<p>修改app下面的build.gradle，将刚添加的jar修改为provided方式</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/145554-4c0bfd12bfde1b00.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="jar修改为provided 方式.png"></p>
-        
-          <a class="article-more-a" href="/2016/11/11/框架初步使用与安全检测/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">应用安全</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/11/11/框架初步使用与安全检测/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-拿来即用：Android-App签名校验和Dex文件校验" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/11/06/拿来即用：Android-App签名校验和Dex文件校验/">拿来即用：App签名校验和Dex文件校验</a>
-    </h1>
-  
-
-        
-        <a href="/2016/11/06/拿来即用：Android-App签名校验和Dex文件校验/" class="archive-article-date">
-  	<time datetime="2016-11-06T00:24:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-06</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="应用签名校验"><a href="#应用签名校验" class="headerlink" title="应用签名校验"></a>应用签名校验</h2>
-        
-          <a class="article-more-a" href="/2016/11/06/拿来即用：Android-App签名校验和Dex文件校验/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">应用安全</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/11/06/拿来即用：Android-App签名校验和Dex文件校验/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -910,11 +909,15 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">应用安全</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Tips</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">应用安全</a>
+                <a href="javascript:void(0)" class="js-tag color3">android</a>
               </li>
              
               <li class="article-tag-list-item">

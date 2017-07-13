@@ -6,14 +6,33 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2017 | Hirah&#39;s Blog</title>
+  <title>动态代理机制 | Hirah&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hirah's Blog">
-<meta property="og:url" content="http://yoursite.com/archives/2017/index.html">
+  <meta name="description" content="动态代理
+动态代理的优点有：
+
+隐藏委托类的实现
+解耦，不改变委托类代码情况下做一些额外处理
+方便对代理类的函数做统一或特殊处理">
+<meta property="og:type" content="article">
+<meta property="og:title" content="动态代理机制">
+<meta property="og:url" content="http://yoursite.com/2017/07/13/动态代理机制/index.html">
 <meta property="og:site_name" content="Hirah's Blog">
+<meta property="og:description" content="动态代理
+动态代理的优点有：
+
+隐藏委托类的实现
+解耦，不改变委托类代码情况下做一些额外处理
+方便对代理类的函数做统一或特殊处理">
+<meta property="og:updated_time" content="2017-07-13T15:57:55.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hirah's Blog">
+<meta name="twitter:title" content="动态代理机制">
+<meta name="twitter:description" content="动态代理
+动态代理的优点有：
+
+隐藏委托类的实现
+解耦，不改变委托类代码情况下做一些额外处理
+方便对代理类的函数做统一或特殊处理">
   
     <link rel="alternative" href="/atom.xml" title="Hirah&#39;s Blog" type="application/atom+xml">
   
@@ -142,36 +161,95 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-动态代理机制" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      动态代理机制
+    </h1>
+  
+
+        
+        <a href="/2017/07/13/动态代理机制/" class="archive-article-date">
+  	<time datetime="2017-07-13T15:18:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-13</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="动态代理"><a href="#动态代理" class="headerlink" title="动态代理"></a>动态代理</h4><blockquote>
+<p>动态代理的优点有：</p>
+<ul>
+<li>隐藏委托类的实现</li>
+<li>解耦，不改变委托类代码情况下做一些额外处理</li>
+<li>方便对代理类的函数做统一或特殊处理</li>
+</ul>
+</blockquote>
+<a id="more"></a>
+<h5 id="实现步骤"><a href="#实现步骤" class="headerlink" title="实现步骤"></a>实现步骤</h5><ul>
+<li><p>新建接口类</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Subject</span>   </span></div><div class="line">&#123;   </div><div class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">doSomething</span><span class="params">()</span></span>;   </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>创建委托类并实现定义的接口类</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RealSubject</span> <span class="keyword">implements</span> <span class="title">Subject</span>   </span></div><div class="line">&#123;   </div><div class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">doSomething</span><span class="params">()</span>   </span></div><div class="line">  &#123;   </div><div class="line">    System.out.println( <span class="string">"call doSomething()"</span> );   </div><div class="line">  &#125;   </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>创建代理帮助类，实现<strong>InvocationHandler</strong>接口</p>
+<blockquote>
+<p>InvocationHandler:是负责连接代理类和委托类的中间类必须实现的接口</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> java.lang.reflect.InvocationHandler;  </div><div class="line"><span class="keyword">import</span> java.lang.reflect.Method;  </div><div class="line"><span class="keyword">import</span> java.lang.reflect.Proxy;  </div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ProxyHandler</span> <span class="keyword">implements</span> <span class="title">InvocationHandler</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">private</span> Object tar;</div><div class="line"></div><div class="line">    <span class="comment">//绑定委托对象，并返回代理类</span></div><div class="line">    <span class="function"><span class="keyword">public</span> Object <span class="title">bind</span><span class="params">(Object tar)</span></span></div><div class="line">    &#123;</div><div class="line">      	<span class="comment">//tar属性表示委托类对象。</span></div><div class="line">        <span class="keyword">this</span>.tar = tar;</div><div class="line">      </div><div class="line">        <span class="comment">//绑定该类实现的所有接口，取得代理类 </span></div><div class="line">        <span class="keyword">return</span> Proxy.newProxyInstance(</div><div class="line">          <span class="comment">//loader表示类加载器</span></div><div class="line">          tar.getClass().getClassLoader(),</div><div class="line">          <span class="comment">//interfaces表示委托类的接口，生成代理类时需要实现这些接口</span></div><div class="line">          tar.getClass().getInterfaces(),</div><div class="line">          <span class="comment">//InvocationHandler实现类对象，负责连接代理类和委托类的中间类</span></div><div class="line">          <span class="keyword">this</span>);</div><div class="line">    &#125;    </div><div class="line">	<span class="comment">//当proxy生成字节码时 会调用invoke方法 </span></div><div class="line">    <span class="function"><span class="keyword">public</span> Object <span class="title">invoke</span><span class="params">(Object proxy , Method method , Object[] args)</span><span class="keyword">throws</span> Throwable</span></div><div class="line">    &#123;</div><div class="line">        Object result = <span class="keyword">null</span>;</div><div class="line">        <span class="comment">//这里就可以进行所谓的AOP编程了</span></div><div class="line">        <span class="comment">//在调用具体函数方法前，执行功能处理</span></div><div class="line">        result = method.invoke(tar,args);</div><div class="line">        <span class="comment">//在调用具体函数方法后，执行功能处理</span></div><div class="line">        <span class="keyword">return</span> result;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestProxy</span></span></div><div class="line">&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span></div><div class="line">    &#123;</div><div class="line">           ProxyHandler proxy = <span class="keyword">new</span> ProxyHandler();</div><div class="line">           <span class="comment">//绑定该类实现的所有接口</span></div><div class="line">           Subject sub = (Subject) proxy.bind(<span class="keyword">new</span> RealSubject());</div><div class="line">      		<span class="comment">//调用代理对象的每个函数实际最终都是调用了InvocationHandler的invoke函数。</span></div><div class="line">           sub.doSomething();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h5 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h5><blockquote>
+<p>动态代理可以理解为双向静态代理，我们先是创建委托类B，系统动态生成代理类A。</p>
+<p>然后创建一个实现了InvocationHandler的子类C，子类连接代理类A和委托类B。</p>
+<p>它是代理类A的委托类，是委托类B的代理类。</p>
+<p>用户直接调用代理类A的对象，A将调用转给它的委托类C，委托类C再将调用转发给它的委托类B。</p>
+</blockquote>
+<h5 id="用到的地方"><a href="#用到的地方" class="headerlink" title="用到的地方"></a>用到的地方</h5><ul>
+<li>jfinal框架中的拦截器机制就是基于动态代理实现的。<ul>
+<li>使用 cglib 动态代理</li>
+<li>将InvocationHandler抽象为一个Invocation，在invoke方法中实现调用委托类方法之前对本次请求进行拦截。</li>
+</ul>
+</li>
+<li>Retrofit:简化了网络请求</li>
+</ul>
+<p>#### </p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/07/13/动态代理机制/" class="archive-article-date">
-  	<time datetime="2017-07-13T15:18:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/13/动态代理机制/">动态代理机制</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -183,328 +261,88 @@ var _hmt = _hmt || [];
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/07/13/动态代理机制/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/07/13/DCL单例/" class="archive-article-date">
-  	<time datetime="2017-07-13T15:18:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-13</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/13/DCL单例/">DCL单例</a>
-    </h1>
+  
+    <a href="/2017/07/13/DCL单例/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">DCL单例</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+  
+    <div class="duoshuo"></div>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/07/13/Retrofit 实现原理/" class="archive-article-date">
-  	<time datetime="2017-07-13T15:18:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/13/Retrofit 实现原理/">Retrofit实现原理</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">android</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/05/07/桎梏/" class="archive-article-date">
-  	<time datetime="2017-05-07T08:21:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/07/桎梏/">桎梏</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/05/07/在路上/" class="archive-article-date">
-  	<time datetime="2017-05-07T06:23:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/07/在路上/">在路上</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/05/02/java笔记/" class="archive-article-date">
-  	<time datetime="2017-05-02T02:26:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/02/java笔记/">java笔记</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/28/Docker-入门笔记/" class="archive-article-date">
-  	<time datetime="2017-04-28T07:40:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/28/Docker-入门笔记/">Docker 入门笔记</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/27/Spring-Boot-入门笔记/" class="archive-article-date">
-  	<time datetime="2017-04-27T09:18:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-27</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/27/Spring-Boot-入门笔记/">Spring Boot 入门笔记</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/02/27/ Mac上百度网盘的正确使用姿势/" class="archive-article-date">
-  	<time datetime="2017-02-26T16:09:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-27</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/02/27/ Mac上百度网盘的正确使用姿势/">Mac上百度网盘的正确使用姿势</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Tools</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/01/20/ButterKnife是怎么帮我们做到这一切的？/" class="archive-article-date">
-  	<time datetime="2017-01-20T14:19:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/01/20/ButterKnife是怎么帮我们做到这一切的？/">ButterKnife是怎么帮我们做到这一切的？</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -527,8 +365,8 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

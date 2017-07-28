@@ -198,6 +198,70 @@ var _hmt = _hmt || [];
 
 
   
+    <article id="post-DCL单例" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/07/13/DCL单例/">DCL单例</a>
+    </h1>
+  
+
+        
+        <a href="/2017/07/13/DCL单例/" class="archive-article-date">
+  	<time datetime="2017-07-13T15:18:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-13</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="DCL单例-Double-Check-Lock"><a href="#DCL单例-Double-Check-Lock" class="headerlink" title="DCL单例(Double Check Lock)"></a>DCL单例(Double Check Lock)</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span> </span>&#123;   </div><div class="line">    </div><div class="line">    <span class="comment">/**  </div><div class="line">     * 单例对象实例  </div><div class="line">     */</span>  </div><div class="line">    <span class="keyword">private</span> <span class="keyword">volatile</span> <span class="keyword">static</span> Singleton instance = <span class="keyword">null</span>;   </div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton <span class="title">getInstance</span><span class="params">()</span> </span>&#123;   </div><div class="line">        <span class="keyword">if</span> (instance == <span class="keyword">null</span>) &#123;   </div><div class="line">            <span class="keyword">synchronized</span> (Singleton.class) &#123;   </div><div class="line">                <span class="keyword">if</span> (instance == <span class="keyword">null</span>) &#123;   </div><div class="line">                    instance = <span class="keyword">new</span> Singleton();   </div><div class="line">                &#125;   </div><div class="line">            &#125;   </div><div class="line">        &#125;   </div><div class="line">        <span class="keyword">return</span> instance;   </div><div class="line">    &#125;   </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2017/07/13/DCL单例/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/07/13/DCL单例/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-Retrofit 实现原理" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -320,70 +384,6 @@ var _hmt = _hmt || [];
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2017/07/13/动态代理机制/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-DCL单例" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/13/DCL单例/">DCL单例</a>
-    </h1>
-  
-
-        
-        <a href="/2017/07/13/DCL单例/" class="archive-article-date">
-  	<time datetime="2017-07-13T15:18:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-13</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="DCL单例-Double-Check-Lock"><a href="#DCL单例-Double-Check-Lock" class="headerlink" title="DCL单例(Double Check Lock)"></a>DCL单例(Double Check Lock)</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span> </span>&#123;   </div><div class="line">    </div><div class="line">    <span class="comment">/**  </div><div class="line">     * 单例对象实例  </div><div class="line">     */</span>  </div><div class="line">    <span class="keyword">private</span> <span class="keyword">volatile</span> <span class="keyword">static</span> Singleton instance = <span class="keyword">null</span>;   </div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton <span class="title">getInstance</span><span class="params">()</span> </span>&#123;   </div><div class="line">        <span class="keyword">if</span> (instance == <span class="keyword">null</span>) &#123;   </div><div class="line">            <span class="keyword">synchronized</span> (Singleton.class) &#123;   </div><div class="line">                <span class="keyword">if</span> (instance == <span class="keyword">null</span>) &#123;   </div><div class="line">                    instance = <span class="keyword">new</span> Singleton();   </div><div class="line">                &#125;   </div><div class="line">            &#125;   </div><div class="line">        &#125;   </div><div class="line">        <span class="keyword">return</span> instance;   </div><div class="line">    &#125;   </div><div class="line">&#125;</div></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2017/07/13/DCL单例/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/13/DCL单例/">展开全文 >></a>
         </p>
       
 
@@ -586,19 +586,19 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-Docker-入门笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Docker-实践笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/28/Docker-入门笔记/">Docker 入门笔记</a>
+      <a class="article-title" href="/2017/04/28/Docker-实践笔记/">Docker 实践笔记</a>
     </h1>
   
 
         
-        <a href="/2017/04/28/Docker-入门笔记/" class="archive-article-date">
+        <a href="/2017/04/28/Docker-实践笔记/" class="archive-article-date">
   	<time datetime="2017-04-28T07:40:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-28</time>
 </a>
         
@@ -614,7 +614,7 @@ var _hmt = _hmt || [];
 <p>​    世界领先的软件容器化平台。a</p>
 </blockquote>
         
-          <a class="article-more-a" href="/2017/04/28/Docker-入门笔记/#more">more >></a>
+          <a class="article-more-a" href="/2017/04/28/Docker-实践笔记/#more">more >></a>
         
       
 
@@ -627,7 +627,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/28/Docker-入门笔记/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/04/28/Docker-实践笔记/">展开全文 >></a>
         </p>
       
 
@@ -645,19 +645,19 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-Spring-Boot-入门笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Spring-Boot-实践笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/27/Spring-Boot-入门笔记/">Spring Boot 入门笔记</a>
+      <a class="article-title" href="/2017/04/27/Spring-Boot-实践笔记/">Spring Boot 实践笔记</a>
     </h1>
   
 
         
-        <a href="/2017/04/27/Spring-Boot-入门笔记/" class="archive-article-date">
+        <a href="/2017/04/27/Spring-Boot-实践笔记/" class="archive-article-date">
   	<time datetime="2017-04-27T09:18:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-27</time>
 </a>
         
@@ -680,7 +680,7 @@ var _hmt = _hmt || [];
 </li>
 </ul>
         
-          <a class="article-more-a" href="/2017/04/27/Spring-Boot-入门笔记/#more">more >></a>
+          <a class="article-more-a" href="/2017/04/27/Spring-Boot-实践笔记/#more">more >></a>
         
       
 
@@ -704,7 +704,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/27/Spring-Boot-入门笔记/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/04/27/Spring-Boot-实践笔记/">展开全文 >></a>
         </p>
       
 

@@ -1,38 +1,25 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>动态代理机制 | Hirah&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="动态代理
-动态代理的优点有：
-
-隐藏委托类的实现
-解耦，不改变委托类代码情况下做一些额外处理
-方便对代理类的函数做统一或特殊处理">
+  <meta name="description" content="动态代理 动态代理的优点有：  隐藏委托类的实现 解耦，不改变委托类代码情况下做一些额外处理 方便对代理类的函数做统一或特殊处理">
+<meta name="keywords" content="java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="动态代理机制">
 <meta property="og:url" content="http://yoursite.com/2017/07/13/动态代理机制/index.html">
-<meta property="og:site_name" content="Hirah's Blog">
-<meta property="og:description" content="动态代理
-动态代理的优点有：
-
-隐藏委托类的实现
-解耦，不改变委托类代码情况下做一些额外处理
-方便对代理类的函数做统一或特殊处理">
-<meta property="og:updated_time" content="2017-07-13T15:57:55.000Z">
+<meta property="og:site_name" content="Hirah&#39;s Blog">
+<meta property="og:description" content="动态代理 动态代理的优点有：  隐藏委托类的实现 解耦，不改变委托类代码情况下做一些额外处理 方便对代理类的函数做统一或特殊处理">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-11-06T07:29:08.265Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="动态代理机制">
-<meta name="twitter:description" content="动态代理
-动态代理的优点有：
-
-隐藏委托类的实现
-解耦，不改变委托类代码情况下做一些额外处理
-方便对代理类的函数做统一或特殊处理">
+<meta name="twitter:description" content="动态代理 动态代理的优点有：  隐藏委托类的实现 解耦，不改变委托类代码情况下做一些额外处理 方便对代理类的函数做统一或特殊处理">
   
     <link rel="alternative" href="/atom.xml" title="Hirah&#39;s Blog" type="application/atom+xml">
   
@@ -62,7 +49,7 @@ var _hmt = _hmt || [];
 </script>
 
 </head>
-
+</html>
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
@@ -161,7 +148,7 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-动态代理机制" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-动态代理机制" class="article article-type-post " itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -192,18 +179,18 @@ var _hmt = _hmt || [];
 <a id="more"></a>
 <h5 id="实现步骤"><a href="#实现步骤" class="headerlink" title="实现步骤"></a>实现步骤</h5><ul>
 <li><p>新建接口类</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Subject</span>   </span></div><div class="line">&#123;   </div><div class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">doSomething</span><span class="params">()</span></span>;   </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Subject</span>   </span></span><br><span class="line"><span class="class"></span>&#123;   </span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">doSomething</span><span class="params">()</span></span>;   </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>创建委托类并实现定义的接口类</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RealSubject</span> <span class="keyword">implements</span> <span class="title">Subject</span>   </span></div><div class="line">&#123;   </div><div class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">doSomething</span><span class="params">()</span>   </span></div><div class="line">  &#123;   </div><div class="line">    System.out.println( <span class="string">"call doSomething()"</span> );   </div><div class="line">  &#125;   </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RealSubject</span> <span class="keyword">implements</span> <span class="title">Subject</span>   </span></span><br><span class="line"><span class="class"></span>&#123;   </span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">doSomething</span><span class="params">()</span>   </span></span><br><span class="line"><span class="function">  </span>&#123;   </span><br><span class="line">    System.out.println( <span class="string">"call doSomething()"</span> );   </span><br><span class="line">  &#125;   </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>创建代理帮助类，实现<strong>InvocationHandler</strong>接口</p>
 <blockquote>
 <p>InvocationHandler:是负责连接代理类和委托类的中间类必须实现的接口</p>
 </blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> java.lang.reflect.InvocationHandler;  </div><div class="line"><span class="keyword">import</span> java.lang.reflect.Method;  </div><div class="line"><span class="keyword">import</span> java.lang.reflect.Proxy;  </div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ProxyHandler</span> <span class="keyword">implements</span> <span class="title">InvocationHandler</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">private</span> Object tar;</div><div class="line"></div><div class="line">    <span class="comment">//绑定委托对象，并返回代理类</span></div><div class="line">    <span class="function"><span class="keyword">public</span> Object <span class="title">bind</span><span class="params">(Object tar)</span></span></div><div class="line">    &#123;</div><div class="line">      	<span class="comment">//tar属性表示委托类对象。</span></div><div class="line">        <span class="keyword">this</span>.tar = tar;</div><div class="line">      </div><div class="line">        <span class="comment">//绑定该类实现的所有接口，取得代理类 </span></div><div class="line">        <span class="keyword">return</span> Proxy.newProxyInstance(</div><div class="line">          <span class="comment">//loader表示类加载器</span></div><div class="line">          tar.getClass().getClassLoader(),</div><div class="line">          <span class="comment">//interfaces表示委托类的接口，生成代理类时需要实现这些接口</span></div><div class="line">          tar.getClass().getInterfaces(),</div><div class="line">          <span class="comment">//InvocationHandler实现类对象，负责连接代理类和委托类的中间类</span></div><div class="line">          <span class="keyword">this</span>);</div><div class="line">    &#125;    </div><div class="line">	<span class="comment">//当proxy生成字节码时 会调用invoke方法 </span></div><div class="line">    <span class="function"><span class="keyword">public</span> Object <span class="title">invoke</span><span class="params">(Object proxy , Method method , Object[] args)</span><span class="keyword">throws</span> Throwable</span></div><div class="line">    &#123;</div><div class="line">        Object result = <span class="keyword">null</span>;</div><div class="line">        <span class="comment">//这里就可以进行所谓的AOP编程了</span></div><div class="line">        <span class="comment">//在调用具体函数方法前，执行功能处理</span></div><div class="line">        result = method.invoke(tar,args);</div><div class="line">        <span class="comment">//在调用具体函数方法后，执行功能处理</span></div><div class="line">        <span class="keyword">return</span> result;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.lang.reflect.InvocationHandler;  </span><br><span class="line"><span class="keyword">import</span> java.lang.reflect.Method;  </span><br><span class="line"><span class="keyword">import</span> java.lang.reflect.Proxy;  </span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ProxyHandler</span> <span class="keyword">implements</span> <span class="title">InvocationHandler</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> Object tar;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//绑定委托对象，并返回代理类</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Object <span class="title">bind</span><span class="params">(Object tar)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">      	<span class="comment">//tar属性表示委托类对象。</span></span><br><span class="line">        <span class="keyword">this</span>.tar = tar;</span><br><span class="line">      </span><br><span class="line">        <span class="comment">//绑定该类实现的所有接口，取得代理类 </span></span><br><span class="line">        <span class="keyword">return</span> Proxy.newProxyInstance(</span><br><span class="line">          <span class="comment">//loader表示类加载器</span></span><br><span class="line">          tar.getClass().getClassLoader(),</span><br><span class="line">          <span class="comment">//interfaces表示委托类的接口，生成代理类时需要实现这些接口</span></span><br><span class="line">          tar.getClass().getInterfaces(),</span><br><span class="line">          <span class="comment">//InvocationHandler实现类对象，负责连接代理类和委托类的中间类</span></span><br><span class="line">          <span class="keyword">this</span>);</span><br><span class="line">    &#125;    </span><br><span class="line">	<span class="comment">//当proxy生成字节码时 会调用invoke方法 </span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Object <span class="title">invoke</span><span class="params">(Object proxy , Method method , Object[] args)</span><span class="keyword">throws</span> Throwable</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        Object result = <span class="keyword">null</span>;</span><br><span class="line">        <span class="comment">//这里就可以进行所谓的AOP编程了</span></span><br><span class="line">        <span class="comment">//在调用具体函数方法前，执行功能处理</span></span><br><span class="line">        result = method.invoke(tar,args);</span><br><span class="line">        <span class="comment">//在调用具体函数方法后，执行功能处理</span></span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestProxy</span></span></div><div class="line">&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span></div><div class="line">    &#123;</div><div class="line">           ProxyHandler proxy = <span class="keyword">new</span> ProxyHandler();</div><div class="line">           <span class="comment">//绑定该类实现的所有接口</span></div><div class="line">           Subject sub = (Subject) proxy.bind(<span class="keyword">new</span> RealSubject());</div><div class="line">      		<span class="comment">//调用代理对象的每个函数实际最终都是调用了InvocationHandler的invoke函数。</span></div><div class="line">           sub.doSomething();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<li><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestProxy</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">           ProxyHandler proxy = <span class="keyword">new</span> ProxyHandler();</span><br><span class="line">           <span class="comment">//绑定该类实现的所有接口</span></span><br><span class="line">           Subject sub = (Subject) proxy.bind(<span class="keyword">new</span> RealSubject());</span><br><span class="line">      		<span class="comment">//调用代理对象的每个函数实际最终都是调用了InvocationHandler的invoke函数。</span></span><br><span class="line">           sub.doSomething();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h5 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h5><blockquote>
@@ -335,8 +322,8 @@ var _hmt = _hmt || [];
     </a>
   
   
-    <a href="/2017/05/07/桎梏/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">桎梏</div>
+    <a href="/2017/07/13/DCL单例/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">DCL单例</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -361,7 +348,7 @@ var _hmt = _hmt || [];
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2017 Hirah
+    		&copy; 2018 Hirah
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -440,19 +427,19 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Tips</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">应用安全</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">android</a>
+                <a href="javascript:void(0)" class="js-tag color5">Tips</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Tools</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">android</a>
               </li>
             
             <div class="clearfix"></div>
@@ -460,7 +447,7 @@ var _hmt = _hmt || [];
         </div>
         <ul class="search-ul">
           <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
-            缺失模块。<br/>1、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
+            缺失模块。<br>1、在博客根目录（注意不是yilia根目录）执行以下命令：<br> npm i hexo-generator-json-content --save<br><br>
             2、在根目录_config.yml里添加配置：
 <pre style="font-size: 12px;" q-show="jsonFail">
   jsonContent:

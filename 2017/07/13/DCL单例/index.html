@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>DCL单例 | Hirah&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="DCL单例(Double Check Lock)123456789101112131415161718public class Singleton &amp;#123;           /**       * 单例对象实例       */      private volatile static Singleton instance = null;           public static S">
+<meta name="keywords" content="java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="DCL单例">
 <meta property="og:url" content="http://yoursite.com/2017/07/13/DCL单例/index.html">
-<meta property="og:site_name" content="Hirah's Blog">
+<meta property="og:site_name" content="Hirah&#39;s Blog">
 <meta property="og:description" content="DCL单例(Double Check Lock)123456789101112131415161718public class Singleton &amp;#123;           /**       * 单例对象实例       */      private volatile static Singleton instance = null;           public static S">
+<meta property="og:locale" content="default">
 <meta property="og:updated_time" content="2017-07-13T15:58:39.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="DCL单例">
@@ -47,7 +49,7 @@ var _hmt = _hmt || [];
 </script>
 
 </head>
-
+</html>
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
@@ -146,7 +148,7 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-DCL单例" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-DCL单例" class="article article-type-post " itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -166,7 +168,7 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="DCL单例-Double-Check-Lock"><a href="#DCL单例-Double-Check-Lock" class="headerlink" title="DCL单例(Double Check Lock)"></a>DCL单例(Double Check Lock)</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span> </span>&#123;   </div><div class="line">    </div><div class="line">    <span class="comment">/**  </span></div><div class="line">     * 单例对象实例  </div><div class="line">     */  </div><div class="line">    <span class="keyword">private</span> <span class="keyword">volatile</span> <span class="keyword">static</span> Singleton instance = <span class="keyword">null</span>;   </div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton <span class="title">getInstance</span><span class="params">()</span> </span>&#123;   </div><div class="line">        <span class="keyword">if</span> (instance == <span class="keyword">null</span>) &#123;   </div><div class="line">            <span class="keyword">synchronized</span> (Singleton.class) &#123;   </div><div class="line">                <span class="keyword">if</span> (instance == <span class="keyword">null</span>) &#123;   </div><div class="line">                    instance = <span class="keyword">new</span> Singleton();   </div><div class="line">                &#125;   </div><div class="line">            &#125;   </div><div class="line">        &#125;   </div><div class="line">        <span class="keyword">return</span> instance;   </div><div class="line">    &#125;   </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+        <h4 id="DCL单例-Double-Check-Lock"><a href="#DCL单例-Double-Check-Lock" class="headerlink" title="DCL单例(Double Check Lock)"></a>DCL单例(Double Check Lock)</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span> </span>&#123;   </span><br><span class="line">    </span><br><span class="line">    <span class="comment">/**  </span></span><br><span class="line"><span class="comment">     * 单例对象实例  </span></span><br><span class="line"><span class="comment">     */</span>  </span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">volatile</span> <span class="keyword">static</span> Singleton instance = <span class="keyword">null</span>;   </span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton <span class="title">getInstance</span><span class="params">()</span> </span>&#123;   </span><br><span class="line">        <span class="keyword">if</span> (instance == <span class="keyword">null</span>) &#123;   </span><br><span class="line">            <span class="keyword">synchronized</span> (Singleton.class) &#123;   </span><br><span class="line">                <span class="keyword">if</span> (instance == <span class="keyword">null</span>) &#123;   </span><br><span class="line">                    instance = <span class="keyword">new</span> Singleton();   </span><br><span class="line">                &#125;   </span><br><span class="line">            &#125;   </span><br><span class="line">        &#125;   </span><br><span class="line">        <span class="keyword">return</span> instance;   </span><br><span class="line">    &#125;   </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
 <h5 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h5><ul>
 <li>保证同一变量在多线程内存空间里面值的一致性</li>
@@ -290,18 +292,18 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/2017/07/15/RxJava响应流程/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/07/13/动态代理机制/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          RxJava响应流程
+          动态代理机制
         
       </div>
     </a>
   
   
-    <a href="/2017/07/13/Retrofit 实现原理/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Retrofit实现原理</div>
+    <a href="/2017/05/07/桎梏/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">桎梏</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -326,7 +328,7 @@ var _hmt = _hmt || [];
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2017 Hirah
+    		&copy; 2018 Hirah
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -405,19 +407,19 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Tips</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">应用安全</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">android</a>
+                <a href="javascript:void(0)" class="js-tag color5">Tips</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Tools</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">android</a>
               </li>
             
             <div class="clearfix"></div>
@@ -425,7 +427,7 @@ var _hmt = _hmt || [];
         </div>
         <ul class="search-ul">
           <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
-            缺失模块。<br/>1、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
+            缺失模块。<br>1、在博客根目录（注意不是yilia根目录）执行以下命令：<br> npm i hexo-generator-json-content --save<br><br>
             2、在根目录_config.yml里添加配置：
 <pre style="font-size: 12px;" q-show="jsonFail">
   jsonContent:

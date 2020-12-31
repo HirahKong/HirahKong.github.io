@@ -16,15 +16,15 @@
 <meta property="og:site_name" content="Hirah&#39;s Blog">
 <meta property="og:description" content="首先在Root的手机上安装Xposed框架，然后新建一个android工程，不需要添加任何Activity。 下载Xposed的jar包，然后在android工程app目录创建lib文件夹，将jar包放置进入并依赖。 修改app下面的build.gradle，将刚添加的jar修改为provided方式">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/145554-4c0bfd12bfde1b00.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/145554-a5c47714988b54e1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/145554-57feffd1df76f91f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/145554-8497c8371822d043.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-11-18T11:28:36.066Z">
+<meta property="og:image" content="https://ww1.sinaimg.cn/large/b89b3521ly1gm7b05rr1wj20qa09qdg2.jpg">
+<meta property="og:image" content="https://ww1.sinaimg.cn/large/b89b3521ly1gm7b063pb2j20pw0do3z7.jpg">
+<meta property="og:image" content="https://ww1.sinaimg.cn/large/b89b3521ly1gm7b06nrlhj21200nawhs.jpg">
+<meta property="og:image" content="https://ww1.sinaimg.cn/large/b89b3521ly1gm7b075t55j20g20regnn.jpg">
+<meta property="og:updated_time" content="2020-12-31T13:40:16.511Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用xposed框架进行安全检测">
 <meta name="twitter:description" content="首先在Root的手机上安装Xposed框架，然后新建一个android工程，不需要添加任何Activity。 下载Xposed的jar包，然后在android工程app目录创建lib文件夹，将jar包放置进入并依赖。 修改app下面的build.gradle，将刚添加的jar修改为provided方式">
-<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/145554-4c0bfd12bfde1b00.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta name="twitter:image" content="https://ww1.sinaimg.cn/large/b89b3521ly1gm7b05rr1wj20qa09qdg2.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Hirah&#39;s Blog" type="application/atom+xml">
   
@@ -64,7 +64,7 @@ var _hmt = _hmt || [];
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="https://ws4.sinaimg.cn/large/006tNbRwly1fxuqy01826j30f00f0q3w.jpg" class="js-avatar">
+			<img src="https://tva2.sinaimg.com/large/006tNbRwly1fxuqy01826j30f00f0q3w.jpg" class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/">Hirah</a></h1>
@@ -112,7 +112,7 @@ var _hmt = _hmt || [];
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="https://ws4.sinaimg.cn/large/006tNbRwly1fxuqy01826j30f00f0q3w.jpg" class="js-avatar">
+				<img src="https://tva2.sinaimg.com/large/006tNbRwly1fxuqy01826j30f00f0q3w.jpg" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author js-header-author">Hirah</h1>
@@ -176,16 +176,16 @@ var _hmt = _hmt || [];
         <p>首先在Root的手机上安装Xposed框架，然后新建一个android工程，不需要添加任何Activity。</p>
 <p>下载Xposed的jar包，然后在android工程app目录创建lib文件夹，将jar包放置进入并依赖。</p>
 <p>修改app下面的build.gradle，将刚添加的jar修改为provided方式</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/145554-4c0bfd12bfde1b00.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="jar修改为provided 方式.png"></p>
+<p><img src="https://ww1.sinaimg.cn/large/b89b3521ly1gm7b05rr1wj20qa09qdg2.jpg" alt="image-20201231201422437" style="zoom:50%;"></p>
 <a id="more"></a>
 <p>修改manifest文件，加入Xposed模板的必要描述</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/145554-a5c47714988b54e1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="必要描述.png"></p>
+<p><img src="https://ww1.sinaimg.cn/large/b89b3521ly1gm7b063pb2j20pw0do3z7.jpg" alt="image-20201231201843270" style="zoom:50%;"></p>
 <p>创建一个java类，在里面写hook代码。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> de.robv.android.xposed.IXposedHookLoadPackage; </span><br><span class="line"><span class="keyword">import</span> de.robv.android.xposed.XC_MethodHook; </span><br><span class="line"><span class="keyword">import</span> de.robv.android.xposed.XposedHelpers; </span><br><span class="line"><span class="keyword">import</span> de.robv.android.xposed.callbacks.XC_LoadPackage; </span><br><span class="line"> </span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> <span class="keyword">implements</span> <span class="title">IXposedHookLoadPackage</span> </span>&#123; </span><br><span class="line">    <span class="meta">@Override</span> </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">handleLoadPackage</span><span class="params">(XC_LoadPackage.LoadPackageParam loadPackageParam)</span> <span class="keyword">throws</span> Throwable </span>&#123; </span><br><span class="line">        <span class="comment">//判断包名是否为要 hook 的应用 </span></span><br><span class="line">        <span class="keyword">if</span>(loadPackageParam.packageName.equals(<span class="string">"要Hook的应用包名"</span>)&#123; </span><br><span class="line">          <span class="comment">//hook 对应类的对应方法 </span></span><br><span class="line">、	XposedHelpers.findAndHookMethod(<span class="string">"android.widget.TextView"</span>, loadPackageParam.classLoader, <span class="string">"setText"</span>, CharSequence.class, <span class="keyword">new</span> XC_MethodHook() &#123; </span><br><span class="line">		<span class="meta">@Override</span> </span><br><span class="line">        <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">beforeHookedMethod</span><span class="params">(MethodHookParam param)</span> <span class="keyword">throws</span> Throwable </span>&#123; </span><br><span class="line">           <span class="keyword">super</span>.beforeHookedMethod(param); </span><br><span class="line">          <span class="comment">//将 textView 的 settext 方法的参数修改成了下面的值，所以 APP 里面所以的 TextView 控件都会显示下面的字符串 </span></span><br><span class="line">         param.args[<span class="number">0</span>] = <span class="string">"hook...."</span>; </span><br><span class="line">                &#125; </span><br><span class="line">            &#125;); </span><br><span class="line">        &#125; </span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>创建assets资源文件目录，然后在该目录下创建一个文本文档，名字叫做xposed_init,没有后缀名。在里面写上Hookook的包名再加类名。 </p>
-<p><img src="http://upload-images.jianshu.io/upload_images/145554-57feffd1df76f91f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="xposed_init.jpg"></p>
+<p><img src="https://ww1.sinaimg.cn/large/b89b3521ly1gm7b06nrlhj21200nawhs.jpg" alt="image-20201231201903853" style="zoom:50%;"></p>
 <p>将Hook模板安装到手机上，在Xposed installer里面勾选刚安装上的模板并重启手机。</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/145554-8497c8371822d043.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="勾选模板.jpg"></p>
+<p><img src="https://ww1.sinaimg.cn/large/b89b3521ly1gm7b075t55j20g20regnn.jpg" alt="image-20201231201922480" style="zoom:50%;"></p>
 <p>针对有应用被Hook的风险，我们可以进行Hook框架的检测。如果有Hook框架的话，就给用户提示然后退出。</p>
 <p>实例代码</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">getApplications</span><span class="params">()</span> </span>&#123; </span><br><span class="line"></span><br><span class="line">	List&lt;PackageInfo&gt; packages =</span><br><span class="line">				getPackageManager().getInstalledPackages(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;packages.size();i++) &#123;</span><br><span class="line">		PackageInfo packageInfo = packages.get(i); </span><br><span class="line">		String name = packageInfo.packageName;</span><br><span class="line">		<span class="comment">//检测手机是否装有 xposed</span></span><br><span class="line">		<span class="keyword">if</span>(name.contains(<span class="string">"xposed.installer"</span>))&#123;</span><br><span class="line">    	<span class="comment">/*</span></span><br><span class="line"><span class="comment">   	 	相应的处理</span></span><br><span class="line"><span class="comment">    	*/</span> Log.d(<span class="string">"test:"</span>,<span class="string">"xposed"</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -328,7 +328,7 @@ var _hmt = _hmt || [];
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2018 Hirah
+    		&copy; 2020 Hirah
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -399,6 +399,10 @@ var _hmt = _hmt || [];
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Tools</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Android</a>
               </li>
              
@@ -407,7 +411,7 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Tips</a>
+                <a href="javascript:void(0)" class="js-tag color3">android</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -415,11 +419,15 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Tools</a>
+                <a href="javascript:void(0)" class="js-tag color4">组件化</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">android</a>
+                <a href="javascript:void(0)" class="js-tag color1">Other</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Tips</a>
               </li>
             
             <div class="clearfix"></div>

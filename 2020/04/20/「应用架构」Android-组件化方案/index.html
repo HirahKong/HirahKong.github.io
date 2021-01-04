@@ -19,8 +19,7 @@
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://ww1.sinaimg.cn/large/b89b3521ly1gm7e4tzvmkj20vc0fp0sx.jpg">
 <meta property="og:image" content="https://ww1.sinaimg.cn/large/b89b3521ly1gm7e4ufnh5j20jc0aw74k.jpg">
-<meta property="og:image" content="https://ww1.sinaimg.cn/large/b89b3521ly1gm7e4uo0tej20id095glt.jpg">
-<meta property="og:updated_time" content="2020-12-31T14:08:10.873Z">
+<meta property="og:updated_time" content="2021-01-04T03:43:17.718Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="「应用架构」Android 组件化方案">
 <meta name="twitter:description" content="概述组件化初衷 APP版本不断的迭代，新功能的不断增加，业务也会变的越来越复杂，维护成本高。 业务耦合度高，代码越来越臃肿，团队内部多人协作开发困难。 Android项目在编译代码的时候电脑会非常卡，又因为单一工程下代码耦合严重，每修改一处代码后都要重新编译打包测试，导致非常耗时。 方便单元测试，改动单独一个业务模块，不需要着重于关注其他模块被影响。 业务模块冗余，相同功能的业务模块在不同App中">
@@ -214,8 +213,9 @@ var _hmt = _hmt || [];
 <h4 id="主流方式"><a href="#主流方式" class="headerlink" title="主流方式"></a>主流方式</h4><p>​    现有主流方式基本是引入BaseModule层，在BaseModule层放置对外接口，使用时依赖BaseModule层接口。业务组件中实现接口后，在App层引入具体实现，建立关联。</p>
 <p>​    但是这个方式在开发的过程中会引入不必要的接口进来，增加代码复杂度。而且因为所有业务组价的对外接口都放置在一起，修改起来极不方便。修改任意接口，所有的依赖方都要升级，照成不必要的开发工作。</p>
 <p><img src="https://ww1.sinaimg.cn/large/b89b3521ly1gm7e4ufnh5j20jc0aw74k.jpg" alt="145554-2d249ac5903d1629"></p>
-<h4 id="优化方式"><a href="#优化方式" class="headerlink" title="优化方式"></a>优化方式</h4><p>​    引入后端Dubbo框架的服务化思维，依赖某个服务，只需要依赖其对外暴露的 API 模块（只包含接口和数据结构的 Maven 依赖），不需要依赖其具体实现。降低使用复杂度和维护成本</p>
-<p><img src="https://ww1.sinaimg.cn/large/b89b3521ly1gm7e4uo0tej20id095glt.jpg" alt="145554-c85ae0e4a38de3a3"></p>
+<h4 id="优化方式"><a href="#优化方式" class="headerlink" title="优化方式"></a>优化方式</h4><p>​    依赖某个服务，只需要依赖其对外暴露的 API 模块，只包含接口和数据结构的 API 依赖，不需要依赖其具体实现。降低使用复杂度和维护成本</p>
+<h4 id="致谢"><a href="#致谢" class="headerlink" title="致谢"></a>致谢</h4><p>感谢以下极客的无私分享</p>
+<p><a href="https://tech.youzan.com/you-zan-yi-dong-androidzu-jian-hua-fang-an/" target="_blank" rel="noopener">有赞微商城-Android组件化方案</a></p>
 
       
 
@@ -438,11 +438,11 @@ var _hmt = _hmt || [];
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Android</a>
+                <a href="javascript:void(0)" class="js-tag color1">Tools</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Tools</a>
+                <a href="javascript:void(0)" class="js-tag color3">Android</a>
               </li>
              
               <li class="article-tag-list-item">
